@@ -1,0 +1,68 @@
+{
+  "parser": "babel-eslint",
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": false
+    },
+    "useJSXTextNode": false,
+    "sourceType": "module",
+    "allowImportExportEverywhere": false,
+    "codeFrame": true
+  },
+  "plugins": [
+    // "prettier"
+    "svelte3"
+  ],
+  "extends": [
+    "airbnb"
+    //"plugin:prettier/recommended"
+  ],
+  "env": {
+    "browser": true,
+    "node": true,
+    "es6": true
+  },
+  "overrides": [
+    {
+      "files": ["*.svelte"],
+      "processor": "svelte3/svelte3"
+    }
+  ],
+  "rules": {
+    // "prettier/prettier": "error",
+    "max-len": [
+      "error",
+      {
+        "code": 100
+      }
+    ],
+    "prefer-promise-reject-errors": [
+      "off"
+    ],
+    "react/jsx-filename-extension": [
+      "off"
+    ],
+    "react/prop-types": [
+      "off"
+    ],
+    "no-return-assign": [
+      "off"
+    ],
+    "no-console": [
+      "off"
+    ],
+    "import/no-unresolved": [
+      "off"
+    ],
+    "import/extensions": [
+      "off"
+    ],
+    "import/first": [
+      "off"
+    ]
+  },
+  "globals": {
+    "MODE": "readonly",
+    "UIkit": "readonly"
+  }
+}
